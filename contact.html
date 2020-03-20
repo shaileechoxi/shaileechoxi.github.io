@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <script
+      src="https://kit.fontawesome.com/734b3597af.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>contact me</title>
+    <style>
+          a {
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .text {
+        margin: 10px 0px;
+        font-size: 18px;
+      }
+      .text span {
+        margin: 0 10px;
+      }
+       button:hover,
+      a:hover {
+        color: #beef00;
+        transition: all 0.7s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link current">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="about">
+      <h1 class="lg-heading animated fadeIn delay-1s">Contact<span class="text-secondary animated fadeIn delay-1s"> Me</h1>
+      <h2 class="sm-heading animated fadeIn delay-2s">You can see me at...</h2>
+      <div class="card">
+        <div class="text animated fadeInLeft delay-3s">
+          <a href="mailto:shaileechoxi.com"
+            ><span><i class="fas fa-envelope"></i></span>
+            shaileechoxi@gmail.com</a
+          >
+        </div>
+        <div class="text animated fadeInLeft delay-4s">
+          <a href="tel:+1 226-988-8377"
+            ><span><i class="fas fa-phone-alt"></i></span> +1 (226)-988-8377</a
+          >
+        </div>
+        <div class="text animated fadeInLeft delay-5s">
+          <address>
+            <span><i class="fas fa-map-marker-alt 7x"></i></span>
+            Kitchener,Ontario
+          </address>
+        </div>
+        <div class="icons animated fadeInUp slower delay-6s">
+          <a href="https://www.facebook.com/loveshailu">
+            <i class="fab fa-facebook-f animated heartBeat infinite delay-7s"></i>
+          </a>
+          <a href="https://in.linkedin.com/in/shailee-choxi-587a74124">
+            <i class="fab fa-linkedin-in animated heartBeat infinite delay-7s"></i>
+          </a>
+          <a href="https://github.com/shaileechoxi">
+            <i class="fab fa-github animated heartBeat infinite delay-7s"></i>
+          </a>
+        </div>
+      </div> 
+    </main>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>
+  </body>
+</html>

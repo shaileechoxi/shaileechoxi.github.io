@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script
+      src="https://kit.fontawesome.com/734b3597af.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+    .flip-box {
+      background-color: transparent;
+      width: 350px;
+      height: 200px;
+      border: 1px solid #f1f1f1;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    .flip-box-back h2 {
+      margin-top: 1.5rem;
+    }
+    /* This container is needed to position the front and back side */
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-box-front {
+      background-color:#25274d;
+      color: #beef00
+    }
+
+    /* Style the back side */
+    .flip-box-back {
+      background-color: #25274d;
+      color: white;
+      transform: rotateY(180deg);
+    }.flip-box {
+      background-color: transparent;
+      width: 350px;
+      height: 200px;
+      border: 2px solid #beef00;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-box-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-box:hover .flip-box-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-box-front, .flip-box-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-box-front {
+      background-color: #bbb;
+      color: black;
+    }
+
+    /* Style the back side */
+    .flip-box-back {
+      background-color:#25274d;
+      transform: rotateY(180deg);
+    }
+    .flip-box-back p{
+      color: #beef00;
+    }
+    .flip-box-back a:hover{
+      color: #beef00;
+    }
+    .project-button{
+     
+    }
+    </style>
+    <title>My Work</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link current">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="work">
+      <div class="container">
+        <h1 class="lg-heading animated fadeIn delay-1s">My<span class="text-secondary animated fadeIn delay-2s"> Work</h1>
+        <h2 class="sm-heading animated fadeIn delay-3s">Check out some of my projects</h2>
+        <div class="projects" data-aos="fade-in" data-aos-duration="4000">
+          <div class="item">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front"> 
+                    <img src="img/projects/wordpress/slider.jpg" alt="Project" style="width: 346px; height: 196px;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>FAIRY-TALES</h2>
+                    <span>Wordpress Project</span>
+                    <p> PHP | MYSOL | WORDPRESS</p>
+                    <a href="fairytales.html">Take a Look <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="item">
+            
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front"> 
+                    <img src="img/projects/project1.jpg" alt="Project" style="width: 346px; height: 196px;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>COOKIE CODER</h2>
+                    <span>MERN Stack Project</span>
+                    <p>Node.js | Express.js | MongoDB | React | Redux</p>
+                    <a href="cookiecoder.html">Take a Look <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>         
+          <div class="item">
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front"> 
+                    <img src="img/projects/blade2.jpg" alt="Project" style="width: 346px; height: 196px;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>BALADE</h2>
+                    <span>Android Project</span>
+                    <p> Android | Java | Firebase</p>
+                    <a href="balade.html">Take a Look <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="item">        
+              <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front"> 
+                    <img src="img/projects/redoholics/homepage.jpg" alt="Project" style="width: 346px; height: 196px;">
+                  </div>
+                  <div class="flip-box-back">
+                    <h2>REDOHOLICS</h2>
+                    <span>MEAN Stack Project</span>
+                    <p> Angular | Node.js | Express.js | MongoDB </p>
+                    <a href="redoholics.html">Take a Look <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>  
+      </div>
+    </main>
+
+    <footer>  
+      <div id="main-footer">
+          <div class="name-footer"><h3>Shailee Choxi -</h3></div>
+          <div class="mail-footer"><a class="text-secondary" href="mailto:shaileechoxi.com">shaileechoxi@gmail.com</a></div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>
+  </body>
+</html>

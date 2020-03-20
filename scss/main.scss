@@ -1,0 +1,275 @@
+@import "config";
+@import "menu";
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,400,500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #81a300, #16172e, #25274d, #844142);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  cursor: pointer;
+  overflow: auto;
+}
+@keyframes gradient-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+// Cursor
+.txt-type > .txt {
+  border-right: 0.2rem solid #fff;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 4rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 6rem;
+
+  .icons {
+    margin-top: 1rem;
+
+    a {
+      padding: 0.4rem;
+
+      &:hover {
+        color: $secondary-color;
+        @include easeOut();
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+//about page css
+
+.about-section-heading {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  text-align: center;
+  h1 {
+    text-align: center;
+  }
+}
+
+@keyframes example {
+  0% {
+    background-color: #25274d;
+  }
+  25% {
+    background-color: #212345;
+  }
+  50% {
+    background-color: #1d1f3d;
+  }
+  100% {
+    background-color: #191b35;
+  }
+}
+.wrapper {
+  background-color: #25274d;
+  animation-name: example 15s ease infinite;
+  animation-duration: 20s;
+  animation-delay: 2s;
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+  }
+  .bio {
+    grid-area: bio;
+    margin-top: 25px;
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($primary-color, $amount: 5);
+    padding: 0.8rem;
+    border-bottom: $secondary-color 5px solid;
+    h3 {
+      border-bottom: $secondary-color;
+    }
+  }
+  .about-image {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .about-title {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//Work page
+
+.projects {
+  display: grid;
+  grid-gap: 1rem 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+  img {
+    width: 100%;
+    /* border: 3px #fff solid; */
+    height: 61%;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+  h3,
+  p,
+  a {
+    text-align: center;
+  }
+}
+
+//Contact Page
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+
+  div {
+    font-size: 1.2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    @include easeOut;
+
+    &:hover {
+      padding: 0.5rem 1.5rem;
+      background: $secondary-color;
+      color: set-text-color($primary-color);
+      span {
+        color: set-text-color($primary-color);
+      }
+    }
+  }
+}
+
+//Button styles
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 0.3rem;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, $amount: 50);
+  color: #fff;
+  text-align: center;
+}
+.project-button {
+  width: 100%;
+  text-align: center;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, $amount: 50);
+  color: #333;
+  text-align: center;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  width: 100%;
+
+  .name-footer {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .mail-footer {
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//work > projects
+.project-description {
+  margin-top: 5rem;
+
+  h2 {
+    border-bottom: 0.6px solid #beef00;
+  }
+}
+
+@import "mobile";

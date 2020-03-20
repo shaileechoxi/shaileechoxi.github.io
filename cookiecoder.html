@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="dist/css/main.min.css" />
+    <script
+      src="https://kit.fontawesome.com/734b3597af.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+    * {box-sizing:border-box}
+
+    /* Slideshow container */
+    .slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    }
+
+    /* Hide the images by default */
+    .mySlides {
+    display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #25274d;;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+    background-color: rgba(155, 233, 125, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+    color: #25274d;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #beef00;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    }
+
+    .active {
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    }
+
+    /* Fading animation */
+    .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+    }
+
+    @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+    }
+
+    </style>
+    <title>cookiecoder</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">
+              About me
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="work.html" class="nav-link">
+              My Work
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link current">
+              How To Reach Me
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="about">
+        <h1 class="lg-heading">Cookie<span class="text-secondary"> Coder</h1>
+        <h2 class="sm-heading">Mern Stack Project</h2>
+        <a href="work.html"><p><i class="fas fa-long-arrow-alt-left"></i> Back To Projects</p></a>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="img/projects/project1.jpg" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="img/projects/signin.JPG" style="width:100%">
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="img/projects/signup.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/projects/profile.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/projects/editprofile.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/projects/dashboard.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/projects/developers.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/projects/posts.JPG" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+        </div>
+        <div class="project-description">
+            <h2 class="text-secondary">CookieCoder</h2>
+          <p>Cookiecoder is mainly a web application which is made in concern to developers who can create a developer profile/portfolio, share posts and get help from other developers easily.  The project is build using React Hooks, Async/Await and better overall code.</p>
+          <ul>
+            <li>Builded an extensive backend API with Node.js & Express</li>
+            <li>Protected routes/endpoints with JWT (JSON Web Tokens) and Extensive API testing with Postman.</li>
+            <li>Integrated React with backend in an elegant way, created a smooth workflow with API</li>
+            <li>Used Redux for app state management.</li>
+            <li>Along with that Created many container components that are integrated with Redux. Testing with the Redux Chrome extension</li>           
+          </ul>
+          <br>
+          <h3 class="text-secondary">Technologies-</h3>
+          <p>Node.js | Express.js | MongoDB | React | Redux | ES6+ </p>
+            <a href="https://nameless-mesa-46064.herokuapp.com/" class="btn-light">
+            <i class="fas fa-mouse"></i> View Project
+            </a>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+        </script>
+    </main>
+
+    <footer>  
+      <div id="main-footer">
+          <div class="name-footer"><h3>Shailee Choxi -</h3></div>
+          <div class="mail-footer"><a class="text-secondary" href="mailto:shaileechoxi.com">shaileechoxi@gmail.com</a></div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
